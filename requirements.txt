@@ -1,0 +1,30 @@
+# Core data / ML stack
+pandas==3.0.5
+numpy==2.5.3
+scipy==1.18.1
+scikit-learn==1.9.1
+joblib==1.6.0
+matplotlib==3.11.2
+
+# Orchestration and experiment tracking
+apache-airflow==3.3.2
+mlflow==3.16.1
+
+# Testing
+pytest==9.1.1
+
+# -------------------------------------------------------------------------
+# IMPORTANT INSTALL NOTE
+# -------------------------------------------------------------------------
+# Apache Airflow must be installed with its official constraints file, which
+# pins the full dependency tree. Installing from this file alone can conflict
+# with Airflow. Use the provided setup script, or run:
+#
+#   export PIP_CONSTRAINT=https://raw.githubusercontent.com/apache/airflow/\
+# constraints-3.3.2/constraints-3.12.txt
+#   pip install "apache-airflow==3.3.2"
+#   pip install "mlflow==3.16.1" matplotlib pytest
+#
+# Replace `3.12` in the constraints URL with your Python version
+# (3.10 / 3.11 / 3.12 / 3.13 / 3.14 are supported by Airflow 3.3.2).
+# -------------------------------------------------------------------------
